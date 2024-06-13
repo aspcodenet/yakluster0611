@@ -6,7 +6,7 @@ metadata:
   labels:
     app: staticwebserver
 spec:
-  replicas: 3
+  replicas: 3 #scale out!!!!
   selector:
     matchLabels:
       app: staticwebserver
@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: staticwebserver
-          image: joseluisq/static-web-server 
+          image: yeasy/simple-web
           ports:
             - containerPort: 80
           env:
@@ -32,7 +32,7 @@ metadata:
   labels:
     app: staticwebserver
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   ports:
   - name: http
     port: 80
