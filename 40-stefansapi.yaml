@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: gosite
-          image: git.systementor.se/yacloud/test12345
+          image: git.systementor.se/yacloud/golangapi
           ports:
             - containerPort: 8080
           env:

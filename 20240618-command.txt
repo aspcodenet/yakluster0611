@@ -1,0 +1,1 @@
+kubectl --kubeconfig=./YaKluster0611-kubeconfig.yaml get pods --namespace yatest

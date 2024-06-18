@@ -54,6 +54,7 @@ spec:
       port: 3306
       targetPort: 3306
   type: NodePort
+  #type: ClusterIP
 
 
   #git.systementor.se/yacloud/test12345 
