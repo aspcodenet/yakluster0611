@@ -1,0 +1,8 @@
+kubectl --kubeconfig=./YaKluster0611-kubeconfig.yaml exec  -it mysql-5dfdc67bc7-2kgs4 sh --namespace=yatest
+mysql -p
+lösenordet
+create database gitea;
+exit
+exit
+
+

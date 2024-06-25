@@ -27,4 +27,14 @@ spec:
                 name: gosite-service
                 port:
                   number: 80
-   
+    - host: "stefangitea0625.chickenkiller.com"
+      http:
+        paths:
+          - pathType: Prefix
+            path: "/"
+            backend:
+              service:
+                name: gitea-service
+                port:
+                  number: 80
+      
