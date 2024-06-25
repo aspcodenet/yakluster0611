@@ -1,0 +1,15 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: helloprint
+spec:
+  schedule: "0 2 * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: hello
+            image: git.systementor.se/yacloud/example
+            imagePullPolicy: IfNotPresent
+          restartPolicy: OnFailure
