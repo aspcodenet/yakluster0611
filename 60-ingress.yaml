@@ -37,4 +37,24 @@ spec:
                 name: gitea-service
                 port:
                   number: 80
-      
+    - host: "pythonstefam.chickenkiller.com"
+      http:
+        paths:
+          - pathType: Prefix
+            path: "/"
+            backend:
+              service:
+                name: pythondemo0730-service
+                port:
+                  number: 80
+    - host: "yagolangsitestefan.mooo.com"
+      http:
+        paths:
+          - pathType: Prefix
+            path: "/"
+            backend:
+              service:
+                name: yagolangsite-service
+                port:
+                  number: 80
+            

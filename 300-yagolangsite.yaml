@@ -1,27 +1,26 @@
-# kubectl --kubeconfig=./YaKluster0611-kubeconfig.yaml --namespace=yatest create secret docker-registry regcred    --docker-server=git.systementor.se    --docker-username=yacloud    --docker-password=yacloud1    --docker-email=yacloud@systementor.se
 
-
+#git.systementor.se/yacloud/yagolangsite
 
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: gosite
+  name: yagolangsite
   namespace: yatest
   labels:
-    app: gosite
+    app: yagolangsite
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
-      app: gosite
+      app: yagolangsite
   template:
     metadata:
       labels:
-        app: gosite
+        app: yagolangsite
     spec:
       containers:
-        - name: gosite
-          image: git.systementor.se/242wagenius.daniel/rat-api
+        - name: yagolangsite
+          image: git.systementor.se/yacloud/yagolangsite
           ports:
             - containerPort: 8080
           env:
@@ -34,9 +33,9 @@ apiVersion: v1
 kind: Service
 metadata:
   namespace: yatest
-  name: gosite-service
+  name: yagolangsite-service
   labels:
-    app: gosite
+    app: yagolangsite
 spec:
   type: ClusterIP
   ports:
@@ -45,5 +44,5 @@ spec:
     protocol: TCP
     targetPort: 8080
   selector:
-    app: gosite
+    app: yagolangsite
   sessionAffinity: None
