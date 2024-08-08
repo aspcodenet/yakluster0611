@@ -43,6 +43,12 @@ spec:
     port: 80
     protocol: TCP
     targetPort: 8080
+  livenessProbe:
+    httpGet:
+        path: /healthz    
+  readinessProbe: 
+    httpGet:
+        path: /healthz    
   selector:
     app: yagolangsite
   sessionAffinity: None
