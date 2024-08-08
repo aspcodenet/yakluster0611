@@ -14,6 +14,6 @@ spec:
             path: "/"
             backend:
               service:
-                name: keel-service
+                name: keel
                 port:
                   number: 9300
