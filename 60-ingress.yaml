@@ -57,16 +57,6 @@ spec:
                 name: yagolangsite-service
                 port:
                   number: 80
-    - host: "keeladminstefan.chickenkiller.com"
-      http:
-        paths:
-          - pathType: Prefix
-            path: "/"
-            backend:
-              service:
-                name: keel-service
-                port:
-                  number: 80
 
 
 
